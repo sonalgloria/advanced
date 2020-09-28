@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <title>Skill Safari | Rock, Paper, Scissors</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap for CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="px-2">
+
+    <!-- header Starts -->
+    <header class="container mx-auto p-3 mt-2 border rounded row d-flex flex-row">
+        <div class="mt-3">
+            <img src="logo.svg" alt="logo">
+        </div>
+        <div class="border rounded bg-light d-flex flex-column px-2 pt-2 text-center ml-auto">
+            <h6 class>SCORE</h6>
+            <span id="playerScore" class="display-3">00</span>
+        </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- Page1 Starts -->
+    <section id="page1" class="container px-3 mb-5">   
+        <div class="mx-auto pt-5 text-center triangle">
+            <img class="justify-content-center " src="bg-triangle.svg" alt="bg-triangle">   
+        </div>
+        <div class="px-sm-5">
+            <div class="px-sm-5">
+                <div class="px-sm-5">
+                    <div class="px-sm-5">
+                        <div class="px-sm-5">
+                            <div class="px-sm-5">
+                                <div class="px-sm-5">
+                                    <div class="px-sm-5">
+                                        <div class="overlay row d-flex flex-row">
+                                            <div class="col-6 col-sm-3 text-left py-4 ">
+                                                <input id="paper" type="image" class="justify-content-center p-4 bg-light paperbtn rounded-circle btnhover" src="icon-paper.svg">
+                                            </div>
+                                                    
+                                            <div class="col-6 text-left py-4 ml-sm-5" >
+                                                <input id="scissors" type="image" class="justify-content-center p-4 bg-light scissorsbtn rounded-circle btnhover" src="icon-scissors.svg" >
+                                            </div>
+                                                
+                                            <div class="col-12 text-left p-5 pt-5 ml-3 pl-sm-5">
+                                                <input id="rock" type="image" class="justify-content-center p-4 mx-5 bg-light rockbtn rounded-circle btnhover" src="icon-rock.svg" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>   
+    </section>
+    <!-- Page1 Ends -->
+
+    <!-- Page2 starts -->
+    <section id="page2" class="container page2cls py-5">
+        <div class="row d-flex flex-row">
+            <div class="col-6 col-sm-4 text-center py-3">
+                <h6 class="text-light pb-3">YOU PICKED</h6>
+                <img id="playerSelection" class="p-4 bg-light rounded-circle page2btn"/><br>
+                <span id="playerSelectionTxt" class="text-light"></span>
+            </div>
+                
+            <div class="col-6 col-sm-4 text-center order-sm-2 py-3" >
+                <h6 class="text-light pb-3">HOUSE PICKED</h6>
+               <img id="computerSelection" class="p-4 bg-light rounded-circle page2btn" /> <br>
+               <span id="computerSelectionTxt" class="text-light"></span>
+            </div>
+
+            <div class="col-sm-4 text-center order-sm-1 py-3 mt-sm-5">
+                <h4 id="status" class="text-light">Game Status</h4>
+                <a id="playagain" href="#" class="btn btn-light text-danger py-2 px-4 btnhover">PLAY AGAIN</a>
+            </div>
+        </div>
+    </section>
+    <!-- Page2 Ends -->
+    
+    <!-- Footer starts -->
+    <footer class="container-flex p-sm-5 mt-sm-5">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close text-right">&times;</span>
+            <h4 class="textcolor">RULES</h4>
+            <img src="image-rules.svg" alt="rules">
+        </div>
+        
+        </div>
+        <button id="reset" class="btn float-left mb-3 text-white border-white btnhover" >RESET</button>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="btn float-right mb-3 text-white border-white ml-auto btnhover" >RULES</button>
+    </footer>
+    <!-- Footer ends -->
+
+    <!-- Bootstrap for JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Custom JS  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
